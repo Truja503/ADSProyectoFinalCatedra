@@ -59,5 +59,12 @@ namespace Administrador
         {
             Application.Exit();
         }
+
+        private void ClasificacionPartidosForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'torneoMontesSanBartoloDataSet4.Clasificacion' table. You can move, or remove it, as needed.
+            this.clasificacionTableAdapter.Fill(this.torneoMontesSanBartoloDataSet4.Clasificacion);
+
+        }
     }
 }

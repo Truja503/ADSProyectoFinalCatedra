@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -39,9 +40,19 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.golesYSanciones = new Administrador.GolesYSanciones();
+            this.golesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.golesTableAdapter = new Administrador.GolesYSancionesTableAdapters.GolesTableAdapter();
+            this.partidoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jugadorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sancionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sancionesTableAdapter = new Administrador.GolesYSancionesTableAdapters.SancionesTableAdapter();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.golesYSanciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.golesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sancionesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -140,6 +151,7 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Posiciones";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -157,12 +169,18 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.partidoIDDataGridViewTextBoxColumn,
+            this.jugadorIDDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.sancionesBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(7, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(571, 362);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button7
             // 
@@ -190,6 +208,41 @@
             this.button6.Text = "Grupo Anterior";
             this.button6.UseVisualStyleBackColor = false;
             // 
+            // golesYSanciones
+            // 
+            this.golesYSanciones.DataSetName = "GolesYSanciones";
+            this.golesYSanciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // golesBindingSource
+            // 
+            this.golesBindingSource.DataMember = "Goles";
+            this.golesBindingSource.DataSource = this.golesYSanciones;
+            // 
+            // golesTableAdapter
+            // 
+            this.golesTableAdapter.ClearBeforeFill = true;
+            // 
+            // partidoIDDataGridViewTextBoxColumn
+            // 
+            this.partidoIDDataGridViewTextBoxColumn.DataPropertyName = "PartidoID";
+            this.partidoIDDataGridViewTextBoxColumn.HeaderText = "PartidoID";
+            this.partidoIDDataGridViewTextBoxColumn.Name = "partidoIDDataGridViewTextBoxColumn";
+            // 
+            // jugadorIDDataGridViewTextBoxColumn
+            // 
+            this.jugadorIDDataGridViewTextBoxColumn.DataPropertyName = "JugadorID";
+            this.jugadorIDDataGridViewTextBoxColumn.HeaderText = "JugadorID";
+            this.jugadorIDDataGridViewTextBoxColumn.Name = "jugadorIDDataGridViewTextBoxColumn";
+            // 
+            // sancionesBindingSource
+            // 
+            this.sancionesBindingSource.DataMember = "Sanciones";
+            this.sancionesBindingSource.DataSource = this.golesYSanciones;
+            // 
+            // sancionesTableAdapter
+            // 
+            this.sancionesTableAdapter.ClearBeforeFill = true;
+            // 
             // ClasificacionTablaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,10 +254,14 @@
             this.Name = "ClasificacionTablaForm";
             this.Text = "Clasificacion partidos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClasificacionTablaForm_FormClosing);
+            this.Load += new System.EventHandler(this.ClasificacionTablaForm_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.golesYSanciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.golesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sancionesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,6 +279,13 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
+        private GolesYSanciones golesYSanciones;
+        private System.Windows.Forms.BindingSource golesBindingSource;
+        private GolesYSancionesTableAdapters.GolesTableAdapter golesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn partidoIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jugadorIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource sancionesBindingSource;
+        private GolesYSancionesTableAdapters.SancionesTableAdapter sancionesTableAdapter;
     }
 }
 
