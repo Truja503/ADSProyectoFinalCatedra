@@ -30,35 +30,46 @@
               <Mapping SourceColumn="DG" DataSetColumn="DG" />
               <Mapping SourceColumn="Puntos" DataSetColumn="Puntos" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="TorneoMontesSanBartoloConnectionString (Settings)" DbObjectName="TorneoMontesSanBartolo.dbo.Clasificacion" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        EquipoID, Nombre, PJ, PG, PE, PP, GF, GC, DG, Puntos
+FROM            Clasificacion
+ORDER BY Puntos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="TorneoMontesSanBartoloDataSet4" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="TorneoMontesSanBartoloDataSet4" msprop:Generator_DataSetName="TorneoMontesSanBartoloDataSet4">
+  <xs:element name="TorneoMontesSanBartoloDataSet4" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TorneoMontesSanBartoloDataSet4" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TorneoMontesSanBartoloDataSet4">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Clasificacion" msprop:Generator_RowEvHandlerName="ClasificacionRowChangeEventHandler" msprop:Generator_RowDeletedName="ClasificacionRowDeleted" msprop:Generator_RowDeletingName="ClasificacionRowDeleting" msprop:Generator_RowEvArgName="ClasificacionRowChangeEvent" msprop:Generator_TablePropName="Clasificacion" msprop:Generator_RowChangedName="ClasificacionRowChanged" msprop:Generator_RowChangingName="ClasificacionRowChanging" msprop:Generator_TableClassName="ClasificacionDataTable" msprop:Generator_RowClassName="ClasificacionRow" msprop:Generator_TableVarName="tableClasificacion" msprop:Generator_UserTableName="Clasificacion">
+        <xs:element name="Clasificacion" msprop:Generator_RowClassName="ClasificacionRow" msprop:Generator_RowEvHandlerName="ClasificacionRowChangeEventHandler" msprop:Generator_RowDeletedName="ClasificacionRowDeleted" msprop:Generator_RowDeletingName="ClasificacionRowDeleting" msprop:Generator_RowEvArgName="ClasificacionRowChangeEvent" msprop:Generator_TablePropName="Clasificacion" msprop:Generator_RowChangedName="ClasificacionRowChanged" msprop:Generator_UserTableName="Clasificacion" msprop:Generator_RowChangingName="ClasificacionRowChanging" msprop:Generator_TableClassName="ClasificacionDataTable" msprop:Generator_TableVarName="tableClasificacion">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EquipoID" msprop:Generator_ColumnPropNameInRow="EquipoID" msprop:Generator_ColumnPropNameInTable="EquipoIDColumn" msprop:Generator_ColumnVarNameInTable="columnEquipoID" msprop:Generator_UserColumnName="EquipoID" type="xs:int" />
-              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_UserColumnName="Nombre">
+              <xs:element name="EquipoID" msprop:Generator_UserColumnName="EquipoID" msprop:Generator_ColumnPropNameInTable="EquipoIDColumn" msprop:Generator_ColumnPropNameInRow="EquipoID" msprop:Generator_ColumnVarNameInTable="columnEquipoID" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PJ" msprop:Generator_ColumnPropNameInRow="PJ" msprop:Generator_ColumnPropNameInTable="PJColumn" msprop:Generator_ColumnVarNameInTable="columnPJ" msprop:Generator_UserColumnName="PJ" type="xs:int" minOccurs="0" />
-              <xs:element name="PG" msprop:Generator_ColumnPropNameInRow="PG" msprop:Generator_ColumnPropNameInTable="PGColumn" msprop:Generator_ColumnVarNameInTable="columnPG" msprop:Generator_UserColumnName="PG" type="xs:int" minOccurs="0" />
-              <xs:element name="PE" msprop:Generator_ColumnPropNameInRow="PE" msprop:Generator_ColumnPropNameInTable="PEColumn" msprop:Generator_ColumnVarNameInTable="columnPE" msprop:Generator_UserColumnName="PE" type="xs:int" minOccurs="0" />
-              <xs:element name="PP" msprop:Generator_ColumnPropNameInRow="PP" msprop:Generator_ColumnPropNameInTable="PPColumn" msprop:Generator_ColumnVarNameInTable="columnPP" msprop:Generator_UserColumnName="PP" type="xs:int" minOccurs="0" />
-              <xs:element name="GF" msprop:Generator_ColumnPropNameInRow="GF" msprop:Generator_ColumnPropNameInTable="GFColumn" msprop:Generator_ColumnVarNameInTable="columnGF" msprop:Generator_UserColumnName="GF" type="xs:int" minOccurs="0" />
-              <xs:element name="GC" msprop:Generator_ColumnPropNameInRow="GC" msprop:Generator_ColumnPropNameInTable="GCColumn" msprop:Generator_ColumnVarNameInTable="columnGC" msprop:Generator_UserColumnName="GC" type="xs:int" minOccurs="0" />
-              <xs:element name="DG" msprop:Generator_ColumnPropNameInRow="DG" msprop:Generator_ColumnPropNameInTable="DGColumn" msprop:Generator_ColumnVarNameInTable="columnDG" msprop:Generator_UserColumnName="DG" type="xs:int" minOccurs="0" />
-              <xs:element name="Puntos" msprop:Generator_ColumnPropNameInRow="Puntos" msprop:Generator_ColumnPropNameInTable="PuntosColumn" msprop:Generator_ColumnVarNameInTable="columnPuntos" msprop:Generator_UserColumnName="Puntos" type="xs:int" minOccurs="0" />
+              <xs:element name="PJ" msprop:Generator_UserColumnName="PJ" msprop:Generator_ColumnPropNameInTable="PJColumn" msprop:Generator_ColumnPropNameInRow="PJ" msprop:Generator_ColumnVarNameInTable="columnPJ" type="xs:int" minOccurs="0" />
+              <xs:element name="PG" msprop:Generator_UserColumnName="PG" msprop:Generator_ColumnPropNameInTable="PGColumn" msprop:Generator_ColumnPropNameInRow="PG" msprop:Generator_ColumnVarNameInTable="columnPG" type="xs:int" minOccurs="0" />
+              <xs:element name="PE" msprop:Generator_UserColumnName="PE" msprop:Generator_ColumnPropNameInTable="PEColumn" msprop:Generator_ColumnPropNameInRow="PE" msprop:Generator_ColumnVarNameInTable="columnPE" type="xs:int" minOccurs="0" />
+              <xs:element name="PP" msprop:Generator_UserColumnName="PP" msprop:Generator_ColumnPropNameInTable="PPColumn" msprop:Generator_ColumnPropNameInRow="PP" msprop:Generator_ColumnVarNameInTable="columnPP" type="xs:int" minOccurs="0" />
+              <xs:element name="GF" msprop:Generator_UserColumnName="GF" msprop:Generator_ColumnPropNameInTable="GFColumn" msprop:Generator_ColumnPropNameInRow="GF" msprop:Generator_ColumnVarNameInTable="columnGF" type="xs:int" minOccurs="0" />
+              <xs:element name="GC" msprop:Generator_UserColumnName="GC" msprop:Generator_ColumnPropNameInTable="GCColumn" msprop:Generator_ColumnPropNameInRow="GC" msprop:Generator_ColumnVarNameInTable="columnGC" type="xs:int" minOccurs="0" />
+              <xs:element name="DG" msprop:Generator_UserColumnName="DG" msprop:Generator_ColumnPropNameInTable="DGColumn" msprop:Generator_ColumnPropNameInRow="DG" msprop:Generator_ColumnVarNameInTable="columnDG" type="xs:int" minOccurs="0" />
+              <xs:element name="Puntos" msprop:Generator_UserColumnName="Puntos" msprop:Generator_ColumnPropNameInTable="PuntosColumn" msprop:Generator_ColumnPropNameInRow="Puntos" msprop:Generator_ColumnVarNameInTable="columnPuntos" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

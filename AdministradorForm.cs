@@ -67,6 +67,11 @@ namespace Administrador
                 };
                 bd.Equipos.Add(team);
                 bd.SaveChanges();
+
+                MessageBox.Show("Equipo agregado correctamente! ", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEquipoName.Clear();
+                txtlogo.Clear();
+
             }
             catch(Exception ex)
             {
@@ -86,6 +91,9 @@ namespace Administrador
                 };
                 bd.Jugadores.Add(team);
                 bd.SaveChanges();
+                MessageBox.Show("Equipo agregado correctamente! ", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox4.Clear();
+                textBox5.Clear();
             }
             catch (Exception ex)
             {
@@ -95,6 +103,8 @@ namespace Administrador
 
         private void AdministradorForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDeDatos.Equipos' table. You can move, or remove it, as needed.
+            this.equiposTableAdapter1.Fill(this.baseDeDatos.Equipos);
             // TODO: This line of code loads data into the 'torneoMontesSanBartoloDataSet3.Equipos' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'torneoMontesSanBartoloDataSet2.Equipos' table. You can move, or remove it, as needed.
             this.equiposTableAdapter.Fill(this.torneoMontesSanBartoloDataSet2.Equipos);

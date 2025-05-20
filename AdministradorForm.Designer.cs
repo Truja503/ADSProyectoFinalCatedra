@@ -45,6 +45,8 @@
             this.txtlogo = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.torneoMontesSanBartoloDataSet2 = new Administrador.TorneoMontesSanBartoloDataSet2();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -56,24 +58,27 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.equiposBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button10 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.torneoMontesSanBartoloDataSet2 = new Administrador.TorneoMontesSanBartoloDataSet2();
-            this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.equiposTableAdapter = new Administrador.TorneoMontesSanBartoloDataSet2TableAdapters.EquiposTableAdapter();
-            this.equiposBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.equipoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.fechaRegistroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baseDeDatos = new Administrador.BaseDeDatos();
+            this.equiposBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.equiposTableAdapter1 = new Administrador.BaseDeDatosTableAdapters.EquiposTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.torneoMontesSanBartoloDataSet2)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.torneoMontesSanBartoloDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDeDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -275,6 +280,16 @@
             this.comboBox1.TabIndex = 10;
             this.comboBox1.ValueMember = "EquipoID";
             // 
+            // equiposBindingSource
+            // 
+            this.equiposBindingSource.DataMember = "Equipos";
+            this.equiposBindingSource.DataSource = this.torneoMontesSanBartoloDataSet2;
+            // 
+            // torneoMontesSanBartoloDataSet2
+            // 
+            this.torneoMontesSanBartoloDataSet2.DataSetName = "TorneoMontesSanBartoloDataSet2";
+            this.torneoMontesSanBartoloDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(8, 84);
@@ -386,16 +401,20 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.equipoIDDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.logoDataGridViewImageColumn,
-            this.fechaRegistroDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.equiposBindingSource1;
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewImageColumn1,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView1.DataSource = this.equiposBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(439, 53);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(349, 369);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // equiposBindingSource1
+            // 
+            this.equiposBindingSource1.DataMember = "Equipos";
             // 
             // button10
             // 
@@ -423,54 +442,48 @@
             this.button12.Text = "Equipo anterior";
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // torneoMontesSanBartoloDataSet2
-            // 
-            this.torneoMontesSanBartoloDataSet2.DataSetName = "TorneoMontesSanBartoloDataSet2";
-            this.torneoMontesSanBartoloDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // equiposBindingSource
-            // 
-            this.equiposBindingSource.DataMember = "Equipos";
-            this.equiposBindingSource.DataSource = this.torneoMontesSanBartoloDataSet2;
-            // 
             // equiposTableAdapter
             // 
             this.equiposTableAdapter.ClearBeforeFill = true;
             // 
-            // torneoMontesSanBartoloDataSet3
+            // baseDeDatos
             // 
+            this.baseDeDatos.DataSetName = "BaseDeDatos";
+            this.baseDeDatos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // equiposBindingSource1
+            // equiposBindingSource2
             // 
-            this.equiposBindingSource1.DataMember = "Equipos";
+            this.equiposBindingSource2.DataMember = "Equipos";
+            this.equiposBindingSource2.DataSource = this.baseDeDatos;
             // 
             // equiposTableAdapter1
             // 
+            this.equiposTableAdapter1.ClearBeforeFill = true;
             // 
-            // equipoIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.equipoIDDataGridViewTextBoxColumn.DataPropertyName = "EquipoID";
-            this.equipoIDDataGridViewTextBoxColumn.HeaderText = "EquipoID";
-            this.equipoIDDataGridViewTextBoxColumn.Name = "equipoIDDataGridViewTextBoxColumn";
-            this.equipoIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "EquipoID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "EquipoID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // nombreDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // logoDataGridViewImageColumn
+            // dataGridViewImageColumn1
             // 
-            this.logoDataGridViewImageColumn.DataPropertyName = "Logo";
-            this.logoDataGridViewImageColumn.HeaderText = "Logo";
-            this.logoDataGridViewImageColumn.Name = "logoDataGridViewImageColumn";
+            this.dataGridViewImageColumn1.DataPropertyName = "Logo";
+            this.dataGridViewImageColumn1.HeaderText = "Logo";
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             // 
-            // fechaRegistroDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.fechaRegistroDataGridViewTextBoxColumn.DataPropertyName = "FechaRegistro";
-            this.fechaRegistroDataGridViewTextBoxColumn.HeaderText = "FechaRegistro";
-            this.fechaRegistroDataGridViewTextBoxColumn.Name = "fechaRegistroDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "FechaRegistro";
+            this.dataGridViewTextBoxColumn3.HeaderText = "FechaRegistro";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // AdministradorForm
             // 
@@ -494,11 +507,13 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.torneoMontesSanBartoloDataSet2)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.torneoMontesSanBartoloDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDeDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,6 +557,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn logoDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistroDataGridViewTextBoxColumn;
+        private BaseDeDatos baseDeDatos;
+        private System.Windows.Forms.BindingSource equiposBindingSource2;
+        private BaseDeDatosTableAdapters.EquiposTableAdapter equiposTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
 

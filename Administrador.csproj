@@ -75,6 +75,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDeDatos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaseDeDatosNueva.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDeDatosNueva.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClasificacionPartidosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +168,17 @@
     </None>
     <None Include="BaseDeDatos.xss">
       <DependentUpon>BaseDeDatos.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDeDatosNueva.xsc">
+      <DependentUpon>BaseDeDatosNueva.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDeDatosNueva.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDeDatosNueva.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDeDatosNueva.xss">
+      <DependentUpon>BaseDeDatosNueva.xsd</DependentUpon>
     </None>
     <None Include="GolesYSanciones.xsc">
       <DependentUpon>GolesYSanciones.xsd</DependentUpon>
