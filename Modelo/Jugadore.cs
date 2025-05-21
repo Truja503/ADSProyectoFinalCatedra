@@ -11,14 +11,13 @@ namespace Administrador.Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Jugadore()
         {
-            Goles = new HashSet<Gole>();
-            Sanciones = new HashSet<Sancione>();
+            Jugadores_sancionados = new HashSet<Jugadores_sancionados>();
         }
 
-        [Key]
-        public int JugadorID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long id { get; set; }
 
-        public int? EquipoID { get; set; }
+        public long? id_equipo { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -26,12 +25,11 @@ namespace Administrador.Modelo
 
         public int Numero { get; set; }
 
+        public int? Goles { get; set; }
+
         public virtual Equipos Equipos { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Gole> Goles { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sancione> Sanciones { get; set; }
+        public virtual ICollection<Jugadores_sancionados> Jugadores_sancionados { get; set; }
     }
 }

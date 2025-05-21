@@ -63,11 +63,8 @@ namespace Administrador
         private void ClasificacionPartidosForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baseDeDatosNueva.Jornadas' table. You can move, or remove it, as needed.
-            this.jornadasTableAdapter.Fill(this.baseDeDatosNueva.Jornadas);
             // TODO: This line of code loads data into the 'baseDeDatosNueva.Partidos' table. You can move, or remove it, as needed.
-            this.partidosTableAdapter.Fill(this.baseDeDatosNueva.Partidos);
             // TODO: This line of code loads data into the 'torneoMontesSanBartoloDataSet4.Clasificacion' table. You can move, or remove it, as needed.
-            this.clasificacionTableAdapter.Fill(this.torneoMontesSanBartoloDataSet4.Clasificacion);
 
         }
 
@@ -75,13 +72,19 @@ namespace Administrador
         {
             try
             {
-                this.clasificacionTableAdapter.FillBy(this.torneoMontesSanBartoloDataSet4.Clasificacion);
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            MenuForm menu = new MenuForm();
+            menu.Show();
+            this.Close();
         }
     }
 }

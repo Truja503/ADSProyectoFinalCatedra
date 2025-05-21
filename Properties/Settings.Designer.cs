@@ -26,11 +26,22 @@ namespace Administrador.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-R8MS7KJ;Initial Catalog=TorneoMontesSanBartolo;Integrated Sec" +
-            "urity=True;Encrypt=True;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=TorneoMontesSanBartolo;Integrated Security=" +
+            "True;Encrypt=True;TrustServerCertificate=True")]
         public string TorneoMontesSanBartoloConnectionString {
             get {
                 return ((string)(this["TorneoMontesSanBartoloConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=TorneoMontesSanBartolo;User ID=sa;Password=" +
+            "Pass123$_;TrustServerCertificate=True")]
+        public string TorneoMontesSanBartoloConnectionString1 {
+            get {
+                return ((string)(this["TorneoMontesSanBartoloConnectionString1"]));
             }
         }
     }

@@ -12,38 +12,35 @@ namespace Administrador.Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Partido()
         {
-            Goles = new HashSet<Gole>();
-            Sanciones = new HashSet<Sancione>();
+            Jornadas = new HashSet<Jornada>();
         }
 
-        public int PartidoID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long id { get; set; }
 
-        public int? JornadaID { get; set; }
+        public long? id_equipo_local { get; set; }
 
-        public int? EquipoLocalID { get; set; }
+        public long? id_equipo_visitante { get; set; }
 
-        public int? EquipoVisitanteID { get; set; }
+        public int? Goles_local { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime Fecha { get; set; }
+        public int? Goles_visitante { get; set; }
 
-        public int? GolesLocal { get; set; }
+        public int? Jornada { get; set; }
 
-        public int? GolesVisitante { get; set; }
+        public int? Targeta_amarilla { get; set; }
 
-        [StringLength(20)]
-        public string Estado { get; set; }
+        public int? Targeta_roja { get; set; }
+
+        public long? id_jornada { get; set; }
 
         public virtual Equipos Equipos { get; set; }
 
         public virtual Equipos Equipos1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Gole> Goles { get; set; }
+        public virtual ICollection<Jornada> Jornadas { get; set; }
 
-        public virtual Jornada Jornada { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sancione> Sanciones { get; set; }
+        public virtual Jornada Jornada1 { get; set; }
     }
 }

@@ -6,20 +6,17 @@ namespace Administrador.Modelo
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Sancione
+    public partial class Jugadores_sancionados
     {
-        [Key]
-        public int SancionID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long id { get; set; }
 
-        public int? PartidoID { get; set; }
+        public long? id_jugador { get; set; }
 
-        public int? JugadorID { get; set; }
+        public int? Targeta_amarilla { get; set; }
 
-        [StringLength(10)]
-        public string Tipo { get; set; }
+        public int? Targeta_roja { get; set; }
 
         public virtual Jugadore Jugadore { get; set; }
-
-        public virtual Partido Partido { get; set; }
     }
 }

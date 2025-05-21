@@ -16,16 +16,14 @@ namespace Administrador.Modelo
             Partidos1 = new HashSet<Partido>();
         }
 
-        [Key]
-        public int EquipoID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long id { get; set; }
 
         [Required]
         [StringLength(100)]
         public string Nombre { get; set; }
 
-        public byte[] Logo { get; set; }
-
-        public DateTime? FechaRegistro { get; set; }
+        public string Logo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Jugadore> Jugadores { get; set; }

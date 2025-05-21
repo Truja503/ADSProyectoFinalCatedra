@@ -14,12 +14,12 @@ namespace Administrador.Modelo
             Partidos = new HashSet<Partido>();
         }
 
-        public int JornadaID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long id { get; set; }
 
-        public int Numero { get; set; }
+        public long? id_partidos { get; set; }
 
-        [StringLength(100)]
-        public string Nombre { get; set; }
+        public virtual Partido Partido { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Partido> Partidos { get; set; }

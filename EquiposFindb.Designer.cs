@@ -20,9 +20,9 @@ namespace Administrador {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("TorneoMontesSanBartoloDataSet2")]
+    [global::System.Xml.Serialization.XmlRootAttribute("EquiposFindb")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class TorneoMontesSanBartoloDataSet2 : global::System.Data.DataSet {
+    public partial class EquiposFindb : global::System.Data.DataSet {
         
         private EquiposDataTable tableEquipos;
         
@@ -30,7 +30,7 @@ namespace Administrador {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public TorneoMontesSanBartoloDataSet2() {
+        public EquiposFindb() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Administrador {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected TorneoMontesSanBartoloDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected EquiposFindb(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Administrador {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            TorneoMontesSanBartoloDataSet2 cln = ((TorneoMontesSanBartoloDataSet2)(base.Clone()));
+            EquiposFindb cln = ((EquiposFindb)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Administrador {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "TorneoMontesSanBartoloDataSet2";
+            this.DataSetName = "EquiposFindb";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/TorneoMontesSanBartoloDataSet2.xsd";
+            this.Namespace = "http://tempuri.org/EquiposFindb.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEquipos = new EquiposDataTable();
@@ -225,7 +225,7 @@ namespace Administrador {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            TorneoMontesSanBartoloDataSet2 ds = new TorneoMontesSanBartoloDataSet2();
+            EquiposFindb ds = new EquiposFindb();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,13 +279,11 @@ namespace Administrador {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EquiposDataTable : global::System.Data.TypedTableBase<EquiposRow> {
             
-            private global::System.Data.DataColumn columnEquipoID;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnNombre;
             
             private global::System.Data.DataColumn columnLogo;
-            
-            private global::System.Data.DataColumn columnFechaRegistro;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -322,9 +320,9 @@ namespace Administrador {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn EquipoIDColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnEquipoID;
+                    return this.columnid;
                 }
             }
             
@@ -341,14 +339,6 @@ namespace Administrador {
             public global::System.Data.DataColumn LogoColumn {
                 get {
                     return this.columnLogo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FechaRegistroColumn {
-                get {
-                    return this.columnFechaRegistro;
                 }
             }
             
@@ -389,13 +379,12 @@ namespace Administrador {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EquiposRow AddEquiposRow(string Nombre, byte[] Logo, System.DateTime FechaRegistro) {
+            public EquiposRow AddEquiposRow(long id, string Nombre, string Logo) {
                 EquiposRow rowEquiposRow = ((EquiposRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        id,
                         Nombre,
-                        Logo,
-                        FechaRegistro};
+                        Logo};
                 rowEquiposRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEquiposRow);
                 return rowEquiposRow;
@@ -403,9 +392,9 @@ namespace Administrador {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EquiposRow FindByEquipoID(int EquipoID) {
+            public EquiposRow FindByid(long id) {
                 return ((EquiposRow)(this.Rows.Find(new object[] {
-                            EquipoID})));
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -425,33 +414,27 @@ namespace Administrador {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnEquipoID = base.Columns["EquipoID"];
+                this.columnid = base.Columns["id"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnLogo = base.Columns["Logo"];
-                this.columnFechaRegistro = base.Columns["FechaRegistro"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnEquipoID = new global::System.Data.DataColumn("EquipoID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEquipoID);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
-                this.columnLogo = new global::System.Data.DataColumn("Logo", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnLogo = new global::System.Data.DataColumn("Logo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLogo);
-                this.columnFechaRegistro = new global::System.Data.DataColumn("FechaRegistro", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaRegistro);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnEquipoID}, true));
-                this.columnEquipoID.AutoIncrement = true;
-                this.columnEquipoID.AutoIncrementSeed = -1;
-                this.columnEquipoID.AutoIncrementStep = -1;
-                this.columnEquipoID.AllowDBNull = false;
-                this.columnEquipoID.ReadOnly = true;
-                this.columnEquipoID.Unique = true;
+                                this.columnid}, true));
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
                 this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 100;
+                this.columnLogo.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -519,7 +502,7 @@ namespace Administrador {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TorneoMontesSanBartoloDataSet2 ds = new TorneoMontesSanBartoloDataSet2();
+                EquiposFindb ds = new EquiposFindb();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -594,12 +577,12 @@ namespace Administrador {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int EquipoID {
+            public long id {
                 get {
-                    return ((int)(this[this.tableEquipos.EquipoIDColumn]));
+                    return ((long)(this[this.tableEquipos.idColumn]));
                 }
                 set {
-                    this[this.tableEquipos.EquipoIDColumn] = value;
+                    this[this.tableEquipos.idColumn] = value;
                 }
             }
             
@@ -616,10 +599,10 @@ namespace Administrador {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte[] Logo {
+            public string Logo {
                 get {
                     try {
-                        return ((byte[])(this[this.tableEquipos.LogoColumn]));
+                        return ((string)(this[this.tableEquipos.LogoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Logo\' in table \'Equipos\' is DBNull.", e);
@@ -627,22 +610,6 @@ namespace Administrador {
                 }
                 set {
                     this[this.tableEquipos.LogoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime FechaRegistro {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableEquipos.FechaRegistroColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaRegistro\' in table \'Equipos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEquipos.FechaRegistroColumn] = value;
                 }
             }
             
@@ -656,18 +623,6 @@ namespace Administrador {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetLogoNull() {
                 this[this.tableEquipos.LogoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFechaRegistroNull() {
-                return this.IsNull(this.tableEquipos.FechaRegistroColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFechaRegistroNull() {
-                this[this.tableEquipos.FechaRegistroColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -706,7 +661,7 @@ namespace Administrador {
         }
     }
 }
-namespace Administrador.TorneoMontesSanBartoloDataSet2TableAdapters {
+namespace Administrador.EquiposFindbTableAdapters {
     
     
     /// <summary>
@@ -830,50 +785,43 @@ namespace Administrador.TorneoMontesSanBartoloDataSet2TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Equipos";
-            tableMapping.ColumnMappings.Add("EquipoID", "EquipoID");
+            tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("Logo", "Logo");
-            tableMapping.ColumnMappings.Add("FechaRegistro", "FechaRegistro");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Equipos] WHERE (([EquipoID] = @Original_EquipoID) AND ([Nombre" +
-                "] = @Original_Nombre) AND ((@IsNull_FechaRegistro = 1 AND [FechaRegistro] IS NUL" +
-                "L) OR ([FechaRegistro] = @Original_FechaRegistro)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Equipos] WHERE (([id] = @Original_id) AND ([Nombre] = @Origina" +
+                "l_Nombre))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EquipoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EquipoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaRegistro", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaRegistro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Equipos] ([Nombre], [Logo], [FechaRegistro]) VALUES (@Nombre, " +
-                "@Logo, @FechaRegistro);\r\nSELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equip" +
-                "os WHERE (EquipoID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Equipos] ([id], [Nombre], [Logo]) VALUES (@id, @Nombre, @Logo)" +
+                ";\r\nSELECT id, Nombre, Logo FROM Equipos WHERE (id = @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Logo", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaRegistro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Logo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Equipos] SET [Nombre] = @Nombre, [Logo] = @Logo, [FechaRegistro] = @FechaRegistro WHERE (([EquipoID] = @Original_EquipoID) AND ([Nombre] = @Original_Nombre) AND ((@IsNull_FechaRegistro = 1 AND [FechaRegistro] IS NULL) OR ([FechaRegistro] = @Original_FechaRegistro)));
-SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @EquipoID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Equipos] SET [id] = @id, [Nombre] = @Nombre, [Logo] = @Logo WHERE (" +
+                "([id] = @Original_id) AND ([Nombre] = @Original_Nombre));\r\nSELECT id, Nombre, Lo" +
+                "go FROM Equipos WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Logo", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaRegistro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EquipoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EquipoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaRegistro", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaRegistro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EquipoID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EquipoID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Logo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Logo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Administrador.Properties.Settings.Default.TorneoMontesSanBartoloConnectionString;
+            this._connection.ConnectionString = global::Administrador.Properties.Settings.Default.TorneoMontesSanBartoloConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -882,7 +830,7 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT EquipoID, Nombre, Logo, FechaRegistro FROM dbo.Equipos";
+            this._commandCollection[0].CommandText = "SELECT id, Nombre, Logo FROM dbo.Equipos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -890,7 +838,7 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TorneoMontesSanBartoloDataSet2.EquiposDataTable dataTable) {
+        public virtual int Fill(EquiposFindb.EquiposDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -903,9 +851,9 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TorneoMontesSanBartoloDataSet2.EquiposDataTable GetData() {
+        public virtual EquiposFindb.EquiposDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TorneoMontesSanBartoloDataSet2.EquiposDataTable dataTable = new TorneoMontesSanBartoloDataSet2.EquiposDataTable();
+            EquiposFindb.EquiposDataTable dataTable = new EquiposFindb.EquiposDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -913,14 +861,14 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TorneoMontesSanBartoloDataSet2.EquiposDataTable dataTable) {
+        public virtual int Update(EquiposFindb.EquiposDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TorneoMontesSanBartoloDataSet2 dataSet) {
+        public virtual int Update(EquiposFindb dataSet) {
             return this.Adapter.Update(dataSet, "Equipos");
         }
         
@@ -943,21 +891,13 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_EquipoID, string Original_Nombre, global::System.Nullable<global::System.DateTime> Original_FechaRegistro) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_EquipoID));
+        public virtual int Delete(long Original_id, string Original_Nombre) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_id));
             if ((Original_Nombre == null)) {
                 throw new global::System.ArgumentNullException("Original_Nombre");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nombre));
-            }
-            if ((Original_FechaRegistro.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_FechaRegistro.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -979,24 +919,19 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nombre, byte[] Logo, global::System.Nullable<global::System.DateTime> FechaRegistro) {
+        public virtual int Insert(long id, string Nombre, string Logo) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((long)(id));
             if ((Nombre == null)) {
                 throw new global::System.ArgumentNullException("Nombre");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nombre));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Nombre));
             }
             if ((Logo == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((byte[])(Logo));
-            }
-            if ((FechaRegistro.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(FechaRegistro.Value));
-            }
-            else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Logo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1018,41 +953,27 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nombre, byte[] Logo, global::System.Nullable<global::System.DateTime> FechaRegistro, int Original_EquipoID, string Original_Nombre, global::System.Nullable<global::System.DateTime> Original_FechaRegistro, int EquipoID) {
+        public virtual int Update(long id, string Nombre, string Logo, long Original_id, string Original_Nombre) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((long)(id));
             if ((Nombre == null)) {
                 throw new global::System.ArgumentNullException("Nombre");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nombre));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Nombre));
             }
             if ((Logo == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte[])(Logo));
-            }
-            if ((FechaRegistro.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(FechaRegistro.Value));
-            }
-            else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_EquipoID));
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Logo));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((long)(Original_id));
             if ((Original_Nombre == null)) {
                 throw new global::System.ArgumentNullException("Original_Nombre");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Nombre));
             }
-            if ((Original_FechaRegistro.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_FechaRegistro.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(EquipoID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1073,8 +994,8 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nombre, byte[] Logo, global::System.Nullable<global::System.DateTime> FechaRegistro, int Original_EquipoID, string Original_Nombre, global::System.Nullable<global::System.DateTime> Original_FechaRegistro) {
-            return this.Update(Nombre, Logo, FechaRegistro, Original_EquipoID, Original_Nombre, Original_FechaRegistro, Original_EquipoID);
+        public virtual int Update(string Nombre, string Logo, long Original_id, string Original_Nombre) {
+            return this.Update(Original_id, Nombre, Logo, Original_id, Original_Nombre);
         }
     }
     
@@ -1169,7 +1090,7 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(TorneoMontesSanBartoloDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(EquiposFindb dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._equiposTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Equipos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1188,7 +1109,7 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(TorneoMontesSanBartoloDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(EquiposFindb dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._equiposTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Equipos.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1206,7 +1127,7 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(TorneoMontesSanBartoloDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(EquiposFindb dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._equiposTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Equipos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1248,7 +1169,7 @@ SELECT EquipoID, Nombre, Logo, FechaRegistro FROM Equipos WHERE (EquipoID = @Equ
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(TorneoMontesSanBartoloDataSet2 dataSet) {
+        public virtual int UpdateAll(EquiposFindb dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

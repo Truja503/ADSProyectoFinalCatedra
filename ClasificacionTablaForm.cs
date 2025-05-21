@@ -65,9 +65,7 @@ namespace Administrador
         private void ClasificacionTablaForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'golesYSanciones.Sanciones' table. You can move, or remove it, as needed.
-            this.sancionesTableAdapter.Fill(this.golesYSanciones.Sanciones);
             // TODO: This line of code loads data into the 'golesYSanciones.Goles' table. You can move, or remove it, as needed.
-            this.golesTableAdapter.Fill(this.golesYSanciones.Goles);
             // TODO: This line of code loads data into the 'torneoMontesSanBartoloDataSet1.Clasificacion' table. You can move, or remove it, as needed.
 
         }
