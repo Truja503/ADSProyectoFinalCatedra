@@ -62,6 +62,8 @@ namespace Administrador
 
         private void ClasificacionPartidosForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'db2025.Vista_Puntos_Equipos' table. You can move, or remove it, as needed.
+            this.vista_Puntos_EquiposTableAdapter.Fill(this.db2025.Vista_Puntos_Equipos);
             // TODO: This line of code loads data into the 'baseDeDatosNueva.Jornadas' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'baseDeDatosNueva.Partidos' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'torneoMontesSanBartoloDataSet4.Clasificacion' table. You can move, or remove it, as needed.
@@ -85,6 +87,34 @@ namespace Administrador
             MenuForm menu = new MenuForm();
             menu.Show();
             this.Close();
+        }
+
+        private void btnAdministracion_Click(object sender, EventArgs e)
+        {
+
+            AdministradorForm cl = new AdministradorForm();
+            cl.Show();
+            this.Hide();
+        }
+
+        private void btnGolesySanciones_Click(object sender, EventArgs e)
+        {
+            ClasificacionTablaForm cl = new ClasificacionTablaForm();
+            cl.Show();
+            this.Hide();
+        }
+
+        private void fillByToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.vista_Puntos_EquiposTableAdapter.FillBy(this.db2025.Vista_Puntos_Equipos);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

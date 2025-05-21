@@ -396,28 +396,39 @@ SELECT id, id_equipo_local, id_equipo_visitante, Goles_local, Goles_visitante, J
               <Mapping SourceColumn="Empates" DataSetColumn="Empates" />
               <Mapping SourceColumn="Puntos" DataSetColumn="Puntos" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="TorneoMontesSanBartoloConnectionString1 (Settings)" DbObjectName="TorneoMontesSanBartolo.dbo.Vista_Puntos_Equipos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        id, Nombre, Ganados_Local, Ganados_Visitante, Empates, Puntos
+FROM            Vista_Puntos_Equipos
+ORDER BY Puntos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="db2025" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="db2025" msprop:Generator_DataSetName="db2025">
+  <xs:element name="db2025" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="db2025" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="db2025">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Equipos" msprop:Generator_RowEvHandlerName="EquiposRowChangeEventHandler" msprop:Generator_RowDeletedName="EquiposRowDeleted" msprop:Generator_RowDeletingName="EquiposRowDeleting" msprop:Generator_RowEvArgName="EquiposRowChangeEvent" msprop:Generator_TablePropName="Equipos" msprop:Generator_RowChangedName="EquiposRowChanged" msprop:Generator_RowChangingName="EquiposRowChanging" msprop:Generator_TableClassName="EquiposDataTable" msprop:Generator_RowClassName="EquiposRow" msprop:Generator_TableVarName="tableEquipos" msprop:Generator_UserTableName="Equipos">
+        <xs:element name="Equipos" msprop:Generator_RowClassName="EquiposRow" msprop:Generator_RowEvHandlerName="EquiposRowChangeEventHandler" msprop:Generator_RowDeletedName="EquiposRowDeleted" msprop:Generator_RowDeletingName="EquiposRowDeleting" msprop:Generator_RowEvArgName="EquiposRowChangeEvent" msprop:Generator_TablePropName="Equipos" msprop:Generator_RowChangedName="EquiposRowChanged" msprop:Generator_UserTableName="Equipos" msprop:Generator_RowChangingName="EquiposRowChanging" msprop:Generator_TableClassName="EquiposDataTable" msprop:Generator_TableVarName="tableEquipos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:long" />
-              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_UserColumnName="Nombre">
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:long" />
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_UserColumnName="Logo" minOccurs="0">
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -427,104 +438,104 @@ SELECT id, id_equipo_local, id_equipo_visitante, Goles_local, Goles_visitante, J
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Jornadas" msprop:Generator_RowEvHandlerName="JornadasRowChangeEventHandler" msprop:Generator_RowDeletedName="JornadasRowDeleted" msprop:Generator_RowDeletingName="JornadasRowDeleting" msprop:Generator_RowEvArgName="JornadasRowChangeEvent" msprop:Generator_TablePropName="Jornadas" msprop:Generator_RowChangedName="JornadasRowChanged" msprop:Generator_RowChangingName="JornadasRowChanging" msprop:Generator_TableClassName="JornadasDataTable" msprop:Generator_RowClassName="JornadasRow" msprop:Generator_TableVarName="tableJornadas" msprop:Generator_UserTableName="Jornadas">
+        <xs:element name="Jornadas" msprop:Generator_RowClassName="JornadasRow" msprop:Generator_RowEvHandlerName="JornadasRowChangeEventHandler" msprop:Generator_RowDeletedName="JornadasRowDeleted" msprop:Generator_RowDeletingName="JornadasRowDeleting" msprop:Generator_RowEvArgName="JornadasRowChangeEvent" msprop:Generator_TablePropName="Jornadas" msprop:Generator_RowChangedName="JornadasRowChanged" msprop:Generator_UserTableName="Jornadas" msprop:Generator_RowChangingName="JornadasRowChanging" msprop:Generator_TableClassName="JornadasDataTable" msprop:Generator_TableVarName="tableJornadas">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:long" />
-              <xs:element name="id_partidos" msprop:Generator_ColumnPropNameInRow="id_partidos" msprop:Generator_ColumnPropNameInTable="id_partidosColumn" msprop:Generator_ColumnVarNameInTable="columnid_partidos" msprop:Generator_UserColumnName="id_partidos" type="xs:long" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:long" />
+              <xs:element name="id_partidos" msprop:Generator_UserColumnName="id_partidos" msprop:Generator_ColumnPropNameInTable="id_partidosColumn" msprop:Generator_ColumnPropNameInRow="id_partidos" msprop:Generator_ColumnVarNameInTable="columnid_partidos" type="xs:long" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Jugadores" msprop:Generator_RowEvHandlerName="JugadoresRowChangeEventHandler" msprop:Generator_RowDeletedName="JugadoresRowDeleted" msprop:Generator_RowDeletingName="JugadoresRowDeleting" msprop:Generator_RowEvArgName="JugadoresRowChangeEvent" msprop:Generator_TablePropName="Jugadores" msprop:Generator_RowChangedName="JugadoresRowChanged" msprop:Generator_RowChangingName="JugadoresRowChanging" msprop:Generator_TableClassName="JugadoresDataTable" msprop:Generator_RowClassName="JugadoresRow" msprop:Generator_TableVarName="tableJugadores" msprop:Generator_UserTableName="Jugadores">
+        <xs:element name="Jugadores" msprop:Generator_RowClassName="JugadoresRow" msprop:Generator_RowEvHandlerName="JugadoresRowChangeEventHandler" msprop:Generator_RowDeletedName="JugadoresRowDeleted" msprop:Generator_RowDeletingName="JugadoresRowDeleting" msprop:Generator_RowEvArgName="JugadoresRowChangeEvent" msprop:Generator_TablePropName="Jugadores" msprop:Generator_RowChangedName="JugadoresRowChanged" msprop:Generator_UserTableName="Jugadores" msprop:Generator_RowChangingName="JugadoresRowChanging" msprop:Generator_TableClassName="JugadoresDataTable" msprop:Generator_TableVarName="tableJugadores">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:long" />
-              <xs:element name="id_equipo" msprop:Generator_ColumnPropNameInRow="id_equipo" msprop:Generator_ColumnPropNameInTable="id_equipoColumn" msprop:Generator_ColumnVarNameInTable="columnid_equipo" msprop:Generator_UserColumnName="id_equipo" type="xs:long" minOccurs="0" />
-              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_UserColumnName="Nombre">
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:long" />
+              <xs:element name="id_equipo" msprop:Generator_UserColumnName="id_equipo" msprop:Generator_ColumnPropNameInTable="id_equipoColumn" msprop:Generator_ColumnPropNameInRow="id_equipo" msprop:Generator_ColumnVarNameInTable="columnid_equipo" type="xs:long" minOccurs="0" />
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_UserColumnName="Numero" type="xs:int" />
-              <xs:element name="Goles" msprop:Generator_ColumnPropNameInRow="Goles" msprop:Generator_ColumnPropNameInTable="GolesColumn" msprop:Generator_ColumnVarNameInTable="columnGoles" msprop:Generator_UserColumnName="Goles" type="xs:int" minOccurs="0" />
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" type="xs:int" />
+              <xs:element name="Goles" msprop:Generator_UserColumnName="Goles" msprop:Generator_ColumnPropNameInTable="GolesColumn" msprop:Generator_ColumnPropNameInRow="Goles" msprop:Generator_ColumnVarNameInTable="columnGoles" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Jugadores_sancionados" msprop:Generator_RowEvHandlerName="Jugadores_sancionadosRowChangeEventHandler" msprop:Generator_RowDeletedName="Jugadores_sancionadosRowDeleted" msprop:Generator_RowDeletingName="Jugadores_sancionadosRowDeleting" msprop:Generator_RowEvArgName="Jugadores_sancionadosRowChangeEvent" msprop:Generator_TablePropName="Jugadores_sancionados" msprop:Generator_RowChangedName="Jugadores_sancionadosRowChanged" msprop:Generator_RowChangingName="Jugadores_sancionadosRowChanging" msprop:Generator_TableClassName="Jugadores_sancionadosDataTable" msprop:Generator_RowClassName="Jugadores_sancionadosRow" msprop:Generator_TableVarName="tableJugadores_sancionados" msprop:Generator_UserTableName="Jugadores_sancionados">
+        <xs:element name="Jugadores_sancionados" msprop:Generator_RowClassName="Jugadores_sancionadosRow" msprop:Generator_RowEvHandlerName="Jugadores_sancionadosRowChangeEventHandler" msprop:Generator_RowDeletedName="Jugadores_sancionadosRowDeleted" msprop:Generator_RowDeletingName="Jugadores_sancionadosRowDeleting" msprop:Generator_RowEvArgName="Jugadores_sancionadosRowChangeEvent" msprop:Generator_TablePropName="Jugadores_sancionados" msprop:Generator_RowChangedName="Jugadores_sancionadosRowChanged" msprop:Generator_UserTableName="Jugadores_sancionados" msprop:Generator_RowChangingName="Jugadores_sancionadosRowChanging" msprop:Generator_TableClassName="Jugadores_sancionadosDataTable" msprop:Generator_TableVarName="tableJugadores_sancionados">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:long" />
-              <xs:element name="id_jugador" msprop:Generator_ColumnPropNameInRow="id_jugador" msprop:Generator_ColumnPropNameInTable="id_jugadorColumn" msprop:Generator_ColumnVarNameInTable="columnid_jugador" msprop:Generator_UserColumnName="id_jugador" type="xs:long" minOccurs="0" />
-              <xs:element name="Targeta_amarilla" msprop:Generator_ColumnPropNameInRow="Targeta_amarilla" msprop:Generator_ColumnPropNameInTable="Targeta_amarillaColumn" msprop:Generator_ColumnVarNameInTable="columnTargeta_amarilla" msprop:Generator_UserColumnName="Targeta_amarilla" type="xs:int" minOccurs="0" />
-              <xs:element name="Targeta_roja" msprop:Generator_ColumnPropNameInRow="Targeta_roja" msprop:Generator_ColumnPropNameInTable="Targeta_rojaColumn" msprop:Generator_ColumnVarNameInTable="columnTargeta_roja" msprop:Generator_UserColumnName="Targeta_roja" type="xs:int" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:long" />
+              <xs:element name="id_jugador" msprop:Generator_UserColumnName="id_jugador" msprop:Generator_ColumnPropNameInTable="id_jugadorColumn" msprop:Generator_ColumnPropNameInRow="id_jugador" msprop:Generator_ColumnVarNameInTable="columnid_jugador" type="xs:long" minOccurs="0" />
+              <xs:element name="Targeta_amarilla" msprop:Generator_UserColumnName="Targeta_amarilla" msprop:Generator_ColumnPropNameInTable="Targeta_amarillaColumn" msprop:Generator_ColumnPropNameInRow="Targeta_amarilla" msprop:Generator_ColumnVarNameInTable="columnTargeta_amarilla" type="xs:int" minOccurs="0" />
+              <xs:element name="Targeta_roja" msprop:Generator_UserColumnName="Targeta_roja" msprop:Generator_ColumnPropNameInTable="Targeta_rojaColumn" msprop:Generator_ColumnPropNameInRow="Targeta_roja" msprop:Generator_ColumnVarNameInTable="columnTargeta_roja" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Partidos" msprop:Generator_RowEvHandlerName="PartidosRowChangeEventHandler" msprop:Generator_RowDeletedName="PartidosRowDeleted" msprop:Generator_RowDeletingName="PartidosRowDeleting" msprop:Generator_RowEvArgName="PartidosRowChangeEvent" msprop:Generator_TablePropName="Partidos" msprop:Generator_RowChangedName="PartidosRowChanged" msprop:Generator_RowChangingName="PartidosRowChanging" msprop:Generator_TableClassName="PartidosDataTable" msprop:Generator_RowClassName="PartidosRow" msprop:Generator_TableVarName="tablePartidos" msprop:Generator_UserTableName="Partidos">
+        <xs:element name="Partidos" msprop:Generator_RowClassName="PartidosRow" msprop:Generator_RowEvHandlerName="PartidosRowChangeEventHandler" msprop:Generator_RowDeletedName="PartidosRowDeleted" msprop:Generator_RowDeletingName="PartidosRowDeleting" msprop:Generator_RowEvArgName="PartidosRowChangeEvent" msprop:Generator_TablePropName="Partidos" msprop:Generator_RowChangedName="PartidosRowChanged" msprop:Generator_UserTableName="Partidos" msprop:Generator_RowChangingName="PartidosRowChanging" msprop:Generator_TableClassName="PartidosDataTable" msprop:Generator_TableVarName="tablePartidos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:long" />
-              <xs:element name="id_equipo_local" msprop:Generator_ColumnPropNameInRow="id_equipo_local" msprop:Generator_ColumnPropNameInTable="id_equipo_localColumn" msprop:Generator_ColumnVarNameInTable="columnid_equipo_local" msprop:Generator_UserColumnName="id_equipo_local" type="xs:long" minOccurs="0" />
-              <xs:element name="id_equipo_visitante" msprop:Generator_ColumnPropNameInRow="id_equipo_visitante" msprop:Generator_ColumnPropNameInTable="id_equipo_visitanteColumn" msprop:Generator_ColumnVarNameInTable="columnid_equipo_visitante" msprop:Generator_UserColumnName="id_equipo_visitante" type="xs:long" minOccurs="0" />
-              <xs:element name="Goles_local" msprop:Generator_ColumnPropNameInRow="Goles_local" msprop:Generator_ColumnPropNameInTable="Goles_localColumn" msprop:Generator_ColumnVarNameInTable="columnGoles_local" msprop:Generator_UserColumnName="Goles_local" type="xs:int" minOccurs="0" />
-              <xs:element name="Goles_visitante" msprop:Generator_ColumnPropNameInRow="Goles_visitante" msprop:Generator_ColumnPropNameInTable="Goles_visitanteColumn" msprop:Generator_ColumnVarNameInTable="columnGoles_visitante" msprop:Generator_UserColumnName="Goles_visitante" type="xs:int" minOccurs="0" />
-              <xs:element name="Jornada" msprop:Generator_ColumnPropNameInRow="Jornada" msprop:Generator_ColumnPropNameInTable="JornadaColumn" msprop:Generator_ColumnVarNameInTable="columnJornada" msprop:Generator_UserColumnName="Jornada" type="xs:int" minOccurs="0" />
-              <xs:element name="Targeta_amarilla" msprop:Generator_ColumnPropNameInRow="Targeta_amarilla" msprop:Generator_ColumnPropNameInTable="Targeta_amarillaColumn" msprop:Generator_ColumnVarNameInTable="columnTargeta_amarilla" msprop:Generator_UserColumnName="Targeta_amarilla" type="xs:int" minOccurs="0" />
-              <xs:element name="Targeta_roja" msprop:Generator_ColumnPropNameInRow="Targeta_roja" msprop:Generator_ColumnPropNameInTable="Targeta_rojaColumn" msprop:Generator_ColumnVarNameInTable="columnTargeta_roja" msprop:Generator_UserColumnName="Targeta_roja" type="xs:int" minOccurs="0" />
-              <xs:element name="id_jornada" msprop:Generator_ColumnPropNameInRow="id_jornada" msprop:Generator_ColumnPropNameInTable="id_jornadaColumn" msprop:Generator_ColumnVarNameInTable="columnid_jornada" msprop:Generator_UserColumnName="id_jornada" type="xs:long" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:long" />
+              <xs:element name="id_equipo_local" msprop:Generator_UserColumnName="id_equipo_local" msprop:Generator_ColumnPropNameInTable="id_equipo_localColumn" msprop:Generator_ColumnPropNameInRow="id_equipo_local" msprop:Generator_ColumnVarNameInTable="columnid_equipo_local" type="xs:long" minOccurs="0" />
+              <xs:element name="id_equipo_visitante" msprop:Generator_UserColumnName="id_equipo_visitante" msprop:Generator_ColumnPropNameInTable="id_equipo_visitanteColumn" msprop:Generator_ColumnPropNameInRow="id_equipo_visitante" msprop:Generator_ColumnVarNameInTable="columnid_equipo_visitante" type="xs:long" minOccurs="0" />
+              <xs:element name="Goles_local" msprop:Generator_UserColumnName="Goles_local" msprop:Generator_ColumnPropNameInTable="Goles_localColumn" msprop:Generator_ColumnPropNameInRow="Goles_local" msprop:Generator_ColumnVarNameInTable="columnGoles_local" type="xs:int" minOccurs="0" />
+              <xs:element name="Goles_visitante" msprop:Generator_UserColumnName="Goles_visitante" msprop:Generator_ColumnPropNameInTable="Goles_visitanteColumn" msprop:Generator_ColumnPropNameInRow="Goles_visitante" msprop:Generator_ColumnVarNameInTable="columnGoles_visitante" type="xs:int" minOccurs="0" />
+              <xs:element name="Jornada" msprop:Generator_UserColumnName="Jornada" msprop:Generator_ColumnPropNameInTable="JornadaColumn" msprop:Generator_ColumnPropNameInRow="Jornada" msprop:Generator_ColumnVarNameInTable="columnJornada" type="xs:int" minOccurs="0" />
+              <xs:element name="Targeta_amarilla" msprop:Generator_UserColumnName="Targeta_amarilla" msprop:Generator_ColumnPropNameInTable="Targeta_amarillaColumn" msprop:Generator_ColumnPropNameInRow="Targeta_amarilla" msprop:Generator_ColumnVarNameInTable="columnTargeta_amarilla" type="xs:int" minOccurs="0" />
+              <xs:element name="Targeta_roja" msprop:Generator_UserColumnName="Targeta_roja" msprop:Generator_ColumnPropNameInTable="Targeta_rojaColumn" msprop:Generator_ColumnPropNameInRow="Targeta_roja" msprop:Generator_ColumnVarNameInTable="columnTargeta_roja" type="xs:int" minOccurs="0" />
+              <xs:element name="id_jornada" msprop:Generator_UserColumnName="id_jornada" msprop:Generator_ColumnPropNameInTable="id_jornadaColumn" msprop:Generator_ColumnPropNameInRow="id_jornada" msprop:Generator_ColumnVarNameInTable="columnid_jornada" type="xs:long" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="most_sanctioned_view" msprop:Generator_RowEvHandlerName="most_sanctioned_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="most_sanctioned_viewRowDeleted" msprop:Generator_RowDeletingName="most_sanctioned_viewRowDeleting" msprop:Generator_RowEvArgName="most_sanctioned_viewRowChangeEvent" msprop:Generator_TablePropName="most_sanctioned_view" msprop:Generator_RowChangedName="most_sanctioned_viewRowChanged" msprop:Generator_RowChangingName="most_sanctioned_viewRowChanging" msprop:Generator_TableClassName="most_sanctioned_viewDataTable" msprop:Generator_RowClassName="most_sanctioned_viewRow" msprop:Generator_TableVarName="tablemost_sanctioned_view" msprop:Generator_UserTableName="most_sanctioned_view">
+        <xs:element name="most_sanctioned_view" msprop:Generator_RowClassName="most_sanctioned_viewRow" msprop:Generator_RowEvHandlerName="most_sanctioned_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="most_sanctioned_viewRowDeleted" msprop:Generator_RowDeletingName="most_sanctioned_viewRowDeleting" msprop:Generator_RowEvArgName="most_sanctioned_viewRowChangeEvent" msprop:Generator_TablePropName="most_sanctioned_view" msprop:Generator_RowChangedName="most_sanctioned_viewRowChanged" msprop:Generator_UserTableName="most_sanctioned_view" msprop:Generator_RowChangingName="most_sanctioned_viewRowChanging" msprop:Generator_TableClassName="most_sanctioned_viewDataTable" msprop:Generator_TableVarName="tablemost_sanctioned_view">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:long" />
-              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre">
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:long" />
+              <xs:element name="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="id_equipo" msprop:Generator_ColumnPropNameInRow="id_equipo" msprop:Generator_ColumnPropNameInTable="id_equipoColumn" msprop:Generator_ColumnVarNameInTable="columnid_equipo" msprop:Generator_UserColumnName="id_equipo" type="xs:long" minOccurs="0" />
-              <xs:element name="Targeta_roja" msprop:Generator_ColumnPropNameInRow="Targeta_roja" msprop:Generator_ColumnPropNameInTable="Targeta_rojaColumn" msprop:Generator_ColumnVarNameInTable="columnTargeta_roja" msprop:Generator_UserColumnName="Targeta_roja" type="xs:int" minOccurs="0" />
-              <xs:element name="Targeta_amarilla" msprop:Generator_ColumnPropNameInRow="Targeta_amarilla" msprop:Generator_ColumnPropNameInTable="Targeta_amarillaColumn" msprop:Generator_ColumnVarNameInTable="columnTargeta_amarilla" msprop:Generator_UserColumnName="Targeta_amarilla" type="xs:int" minOccurs="0" />
+              <xs:element name="id_equipo" msprop:Generator_UserColumnName="id_equipo" msprop:Generator_ColumnPropNameInTable="id_equipoColumn" msprop:Generator_ColumnPropNameInRow="id_equipo" msprop:Generator_ColumnVarNameInTable="columnid_equipo" type="xs:long" minOccurs="0" />
+              <xs:element name="Targeta_roja" msprop:Generator_UserColumnName="Targeta_roja" msprop:Generator_ColumnPropNameInTable="Targeta_rojaColumn" msprop:Generator_ColumnPropNameInRow="Targeta_roja" msprop:Generator_ColumnVarNameInTable="columnTargeta_roja" type="xs:int" minOccurs="0" />
+              <xs:element name="Targeta_amarilla" msprop:Generator_UserColumnName="Targeta_amarilla" msprop:Generator_ColumnPropNameInTable="Targeta_amarillaColumn" msprop:Generator_ColumnPropNameInRow="Targeta_amarilla" msprop:Generator_ColumnVarNameInTable="columnTargeta_amarilla" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Top_Goleadores" msprop:Generator_RowEvHandlerName="Top_GoleadoresRowChangeEventHandler" msprop:Generator_RowDeletedName="Top_GoleadoresRowDeleted" msprop:Generator_RowDeletingName="Top_GoleadoresRowDeleting" msprop:Generator_RowEvArgName="Top_GoleadoresRowChangeEvent" msprop:Generator_TablePropName="Top_Goleadores" msprop:Generator_RowChangedName="Top_GoleadoresRowChanged" msprop:Generator_RowChangingName="Top_GoleadoresRowChanging" msprop:Generator_TableClassName="Top_GoleadoresDataTable" msprop:Generator_RowClassName="Top_GoleadoresRow" msprop:Generator_TableVarName="tableTop_Goleadores" msprop:Generator_UserTableName="Top_Goleadores">
+        <xs:element name="Top_Goleadores" msprop:Generator_RowClassName="Top_GoleadoresRow" msprop:Generator_RowEvHandlerName="Top_GoleadoresRowChangeEventHandler" msprop:Generator_RowDeletedName="Top_GoleadoresRowDeleted" msprop:Generator_RowDeletingName="Top_GoleadoresRowDeleting" msprop:Generator_RowEvArgName="Top_GoleadoresRowChangeEvent" msprop:Generator_TablePropName="Top_Goleadores" msprop:Generator_RowChangedName="Top_GoleadoresRowChanged" msprop:Generator_UserTableName="Top_Goleadores" msprop:Generator_RowChangingName="Top_GoleadoresRowChanging" msprop:Generator_TableClassName="Top_GoleadoresDataTable" msprop:Generator_TableVarName="tableTop_Goleadores">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:long" />
-              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre">
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:long" />
+              <xs:element name="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="id_equipo" msprop:Generator_ColumnPropNameInRow="id_equipo" msprop:Generator_ColumnPropNameInTable="id_equipoColumn" msprop:Generator_ColumnVarNameInTable="columnid_equipo" msprop:Generator_UserColumnName="id_equipo" type="xs:long" minOccurs="0" />
-              <xs:element name="goles" msprop:Generator_ColumnPropNameInRow="goles" msprop:Generator_ColumnPropNameInTable="golesColumn" msprop:Generator_ColumnVarNameInTable="columngoles" msprop:Generator_UserColumnName="goles" type="xs:int" minOccurs="0" />
+              <xs:element name="id_equipo" msprop:Generator_UserColumnName="id_equipo" msprop:Generator_ColumnPropNameInTable="id_equipoColumn" msprop:Generator_ColumnPropNameInRow="id_equipo" msprop:Generator_ColumnVarNameInTable="columnid_equipo" type="xs:long" minOccurs="0" />
+              <xs:element name="goles" msprop:Generator_UserColumnName="goles" msprop:Generator_ColumnPropNameInTable="golesColumn" msprop:Generator_ColumnPropNameInRow="goles" msprop:Generator_ColumnVarNameInTable="columngoles" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Vista_Puntos_Equipos" msprop:Generator_RowEvHandlerName="Vista_Puntos_EquiposRowChangeEventHandler" msprop:Generator_RowDeletedName="Vista_Puntos_EquiposRowDeleted" msprop:Generator_RowDeletingName="Vista_Puntos_EquiposRowDeleting" msprop:Generator_RowEvArgName="Vista_Puntos_EquiposRowChangeEvent" msprop:Generator_TablePropName="Vista_Puntos_Equipos" msprop:Generator_RowChangedName="Vista_Puntos_EquiposRowChanged" msprop:Generator_RowChangingName="Vista_Puntos_EquiposRowChanging" msprop:Generator_TableClassName="Vista_Puntos_EquiposDataTable" msprop:Generator_RowClassName="Vista_Puntos_EquiposRow" msprop:Generator_TableVarName="tableVista_Puntos_Equipos" msprop:Generator_UserTableName="Vista_Puntos_Equipos">
+        <xs:element name="Vista_Puntos_Equipos" msprop:Generator_RowClassName="Vista_Puntos_EquiposRow" msprop:Generator_RowEvHandlerName="Vista_Puntos_EquiposRowChangeEventHandler" msprop:Generator_RowDeletedName="Vista_Puntos_EquiposRowDeleted" msprop:Generator_RowDeletingName="Vista_Puntos_EquiposRowDeleting" msprop:Generator_RowEvArgName="Vista_Puntos_EquiposRowChangeEvent" msprop:Generator_TablePropName="Vista_Puntos_Equipos" msprop:Generator_RowChangedName="Vista_Puntos_EquiposRowChanged" msprop:Generator_UserTableName="Vista_Puntos_Equipos" msprop:Generator_RowChangingName="Vista_Puntos_EquiposRowChanging" msprop:Generator_TableClassName="Vista_Puntos_EquiposDataTable" msprop:Generator_TableVarName="tableVista_Puntos_Equipos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:long" />
-              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_UserColumnName="Nombre">
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:long" />
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Ganados_Local" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Ganados_Local" msprop:Generator_ColumnPropNameInTable="Ganados_LocalColumn" msprop:Generator_ColumnVarNameInTable="columnGanados_Local" msprop:Generator_UserColumnName="Ganados_Local" type="xs:int" minOccurs="0" />
-              <xs:element name="Ganados_Visitante" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Ganados_Visitante" msprop:Generator_ColumnPropNameInTable="Ganados_VisitanteColumn" msprop:Generator_ColumnVarNameInTable="columnGanados_Visitante" msprop:Generator_UserColumnName="Ganados_Visitante" type="xs:int" minOccurs="0" />
-              <xs:element name="Empates" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Empates" msprop:Generator_ColumnPropNameInTable="EmpatesColumn" msprop:Generator_ColumnVarNameInTable="columnEmpates" msprop:Generator_UserColumnName="Empates" type="xs:int" minOccurs="0" />
-              <xs:element name="Puntos" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Puntos" msprop:Generator_ColumnPropNameInTable="PuntosColumn" msprop:Generator_ColumnVarNameInTable="columnPuntos" msprop:Generator_UserColumnName="Puntos" type="xs:int" minOccurs="0" />
+              <xs:element name="Ganados_Local" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Ganados_Local" msprop:Generator_ColumnPropNameInTable="Ganados_LocalColumn" msprop:Generator_ColumnPropNameInRow="Ganados_Local" msprop:Generator_ColumnVarNameInTable="columnGanados_Local" type="xs:int" minOccurs="0" />
+              <xs:element name="Ganados_Visitante" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Ganados_Visitante" msprop:Generator_ColumnPropNameInTable="Ganados_VisitanteColumn" msprop:Generator_ColumnPropNameInRow="Ganados_Visitante" msprop:Generator_ColumnVarNameInTable="columnGanados_Visitante" type="xs:int" minOccurs="0" />
+              <xs:element name="Empates" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Empates" msprop:Generator_ColumnPropNameInTable="EmpatesColumn" msprop:Generator_ColumnPropNameInRow="Empates" msprop:Generator_ColumnVarNameInTable="columnEmpates" type="xs:int" minOccurs="0" />
+              <xs:element name="Puntos" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Puntos" msprop:Generator_ColumnPropNameInTable="PuntosColumn" msprop:Generator_ColumnPropNameInRow="Puntos" msprop:Generator_ColumnVarNameInTable="columnPuntos" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -565,12 +576,12 @@ SELECT id, id_equipo_local, id_equipo_visitante, Goles_local, Goles_visitante, J
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Jornadas__id_par__4222D4EF" msdata:parent="Partidos" msdata:child="Jornadas" msdata:parentkey="id" msdata:childkey="id_partidos" msprop:Generator_UserParentTable="Partidos" msprop:Generator_UserChildTable="Jornadas" msprop:Generator_RelationVarName="relationFK__Jornadas__id_par__4222D4EF" msprop:Generator_UserRelationName="FK__Jornadas__id_par__4222D4EF" msprop:Generator_ChildPropName="GetJornadasRows" msprop:Generator_ParentPropName="PartidosRow" />
-      <msdata:Relationship name="FK__Jugadores__id_eq__398D8EEE" msdata:parent="Equipos" msdata:child="Jugadores" msdata:parentkey="id" msdata:childkey="id_equipo" msprop:Generator_UserParentTable="Equipos" msprop:Generator_UserChildTable="Jugadores" msprop:Generator_RelationVarName="relationFK__Jugadores__id_eq__398D8EEE" msprop:Generator_ChildPropName="GetJugadoresRows" msprop:Generator_ParentPropName="EquiposRow" msprop:Generator_UserRelationName="FK__Jugadores__id_eq__398D8EEE" />
-      <msdata:Relationship name="FK__Jugadores__id_ju__44FF419A" msdata:parent="Jugadores" msdata:child="Jugadores_sancionados" msdata:parentkey="id" msdata:childkey="id_jugador" msprop:Generator_UserParentTable="Jugadores" msprop:Generator_UserChildTable="Jugadores_sancionados" msprop:Generator_RelationVarName="relationFK__Jugadores__id_ju__44FF419A" msprop:Generator_ChildPropName="GetJugadores_sancionadosRows" msprop:Generator_ParentPropName="JugadoresRow" msprop:Generator_UserRelationName="FK__Jugadores__id_ju__44FF419A" />
-      <msdata:Relationship name="FK__Partidos__id_equ__3F466844" msdata:parent="Equipos" msdata:child="Partidos" msdata:parentkey="id" msdata:childkey="id_equipo_local" msprop:Generator_UserParentTable="Equipos" msprop:Generator_UserChildTable="Partidos" msprop:Generator_RelationVarName="relationFK__Partidos__id_equ__3F466844" msprop:Generator_ChildPropName="GetPartidosRowsByFK__Partidos__id_equ__3F466844" msprop:Generator_ParentPropName="EquiposRowByFK__Partidos__id_equ__3F466844" msprop:Generator_UserRelationName="FK__Partidos__id_equ__3F466844" />
-      <msdata:Relationship name="FK__Partidos__id_equ__403A8C7D" msdata:parent="Equipos" msdata:child="Partidos" msdata:parentkey="id" msdata:childkey="id_equipo_visitante" msprop:Generator_UserParentTable="Equipos" msprop:Generator_UserChildTable="Partidos" msprop:Generator_RelationVarName="relationFK__Partidos__id_equ__403A8C7D" msprop:Generator_ChildPropName="GetPartidosRowsByFK__Partidos__id_equ__403A8C7D" msprop:Generator_ParentPropName="EquiposRowByFK__Partidos__id_equ__403A8C7D" msprop:Generator_UserRelationName="FK__Partidos__id_equ__403A8C7D" />
-      <msdata:Relationship name="FK__Partidos__id_jor__412EB0B6" msdata:parent="Jornadas" msdata:child="Partidos" msdata:parentkey="id" msdata:childkey="id_jornada" msprop:Generator_UserParentTable="Jornadas" msprop:Generator_UserChildTable="Partidos" msprop:Generator_RelationVarName="relationFK__Partidos__id_jor__412EB0B6" msprop:Generator_ChildPropName="GetPartidosRows" msprop:Generator_ParentPropName="JornadasRow" msprop:Generator_UserRelationName="FK__Partidos__id_jor__412EB0B6" />
+      <msdata:Relationship name="FK__Jornadas__id_par__4222D4EF" msdata:parent="Partidos" msdata:child="Jornadas" msdata:parentkey="id" msdata:childkey="id_partidos" msprop:Generator_UserParentTable="Partidos" msprop:Generator_UserChildTable="Jornadas" msprop:Generator_RelationVarName="relationFK__Jornadas__id_par__4222D4EF" msprop:Generator_ChildPropName="GetJornadasRows" msprop:Generator_ParentPropName="PartidosRow" msprop:Generator_UserRelationName="FK__Jornadas__id_par__4222D4EF" />
+      <msdata:Relationship name="FK__Jugadores__id_eq__398D8EEE" msdata:parent="Equipos" msdata:child="Jugadores" msdata:parentkey="id" msdata:childkey="id_equipo" msprop:Generator_UserParentTable="Equipos" msprop:Generator_UserChildTable="Jugadores" msprop:Generator_RelationVarName="relationFK__Jugadores__id_eq__398D8EEE" msprop:Generator_ChildPropName="GetJugadoresRows" msprop:Generator_UserRelationName="FK__Jugadores__id_eq__398D8EEE" msprop:Generator_ParentPropName="EquiposRow" />
+      <msdata:Relationship name="FK__Jugadores__id_ju__44FF419A" msdata:parent="Jugadores" msdata:child="Jugadores_sancionados" msdata:parentkey="id" msdata:childkey="id_jugador" msprop:Generator_UserParentTable="Jugadores" msprop:Generator_UserChildTable="Jugadores_sancionados" msprop:Generator_RelationVarName="relationFK__Jugadores__id_ju__44FF419A" msprop:Generator_ChildPropName="GetJugadores_sancionadosRows" msprop:Generator_UserRelationName="FK__Jugadores__id_ju__44FF419A" msprop:Generator_ParentPropName="JugadoresRow" />
+      <msdata:Relationship name="FK__Partidos__id_equ__3F466844" msdata:parent="Equipos" msdata:child="Partidos" msdata:parentkey="id" msdata:childkey="id_equipo_local" msprop:Generator_UserParentTable="Equipos" msprop:Generator_UserChildTable="Partidos" msprop:Generator_RelationVarName="relationFK__Partidos__id_equ__3F466844" msprop:Generator_ChildPropName="GetPartidosRowsByFK__Partidos__id_equ__3F466844" msprop:Generator_UserRelationName="FK__Partidos__id_equ__3F466844" msprop:Generator_ParentPropName="EquiposRowByFK__Partidos__id_equ__3F466844" />
+      <msdata:Relationship name="FK__Partidos__id_equ__403A8C7D" msdata:parent="Equipos" msdata:child="Partidos" msdata:parentkey="id" msdata:childkey="id_equipo_visitante" msprop:Generator_UserParentTable="Equipos" msprop:Generator_UserChildTable="Partidos" msprop:Generator_RelationVarName="relationFK__Partidos__id_equ__403A8C7D" msprop:Generator_ChildPropName="GetPartidosRowsByFK__Partidos__id_equ__403A8C7D" msprop:Generator_UserRelationName="FK__Partidos__id_equ__403A8C7D" msprop:Generator_ParentPropName="EquiposRowByFK__Partidos__id_equ__403A8C7D" />
+      <msdata:Relationship name="FK__Partidos__id_jor__412EB0B6" msdata:parent="Jornadas" msdata:child="Partidos" msdata:parentkey="id" msdata:childkey="id_jornada" msprop:Generator_UserParentTable="Jornadas" msprop:Generator_UserChildTable="Partidos" msprop:Generator_RelationVarName="relationFK__Partidos__id_jor__412EB0B6" msprop:Generator_ChildPropName="GetPartidosRows" msprop:Generator_UserRelationName="FK__Partidos__id_jor__412EB0B6" msprop:Generator_ParentPropName="JornadasRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

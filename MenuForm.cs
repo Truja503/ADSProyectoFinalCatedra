@@ -26,21 +26,21 @@ namespace Administrador
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form Admin = new AdminPartidosForm();
+            AdminPartidosForm Admin = new AdminPartidosForm();
             Admin.Show();
             this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form Admin = new AdministradorForm();
+            AdministradorForm Admin = new AdministradorForm();
             Admin.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form clasificacion = new ClasificacionTablaForm();
+            ClasificacionTablaForm clasificacion = new ClasificacionTablaForm();
             clasificacion.Show();
             this.Hide();
         }
